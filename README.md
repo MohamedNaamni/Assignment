@@ -2,7 +2,7 @@
 #### 1. make sure python , PIP and docker are installed
 #### 2. clone the repo and prepare your environment
 ```bash
-git clone <repository_url>
+git clone https://github.com/MohamedNaamni/Assignment.git
 cd <repository_name>
 python -m venv venv
 source venv/bin/activate
