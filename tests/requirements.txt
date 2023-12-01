@@ -1,0 +1,8 @@
+pytest
+requests
+pytest-xdist
+junit-xml
+allure-pytest
+coverage
+docker
+
