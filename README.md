@@ -44,4 +44,24 @@ open the file ./results/allure-report/index.html with a web browser
 
 ```
 
-
+## Adding a test
+#### adding a test should be very simple , please view the test suite tests/functional/test_my_app.py
+#### Test Case Example
+```python
+@pytest.mark.sanity  # A test mark ndicates that the test of sanity category
+@pytest.mark.p1      # A test mark indicates that the test in Priorty 1
+def test_reverse_functionality(self,my_app):
+    '''
+    test basic reverse functionally
+    :param my_app: the tested app wrapper module
+    '''
+    input_string = "The quick brown fox jumps over the lazy dog"
+    expected_result = "dog lazy the over jumps fox brown quick The"
+    with allure.step("calling and validating reverse"): # allure step that can be seen in allure report
+        reverse_response = my_app.reverse_get(in_param=input_string)
+        validate_expected_result(response=reverse_response,expected_result=expected_result)
+```
+```
+Note: 
+my_app is a fixture the deliveres to the test case an Interface Moudle to a ruuning application on a container
+```
